@@ -1,379 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
+<head>
     <meta charset="utf-8">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZIYU WANG</title>
+    <title>HOME</title>
 
-		<link href="main.css" rel="stylesheet">
-    <!-- https://fonts.google.com/specimen/Barlow?selection.family=Barlow:400,600,700 -->
+    <link href="main.css" rel="stylesheet">
+  <!--   https://fonts.google.com/specimen/Barlow?selection.family=Barlow:400,600,700-->
     <style>
-    @import url('https://fonts.googleapis.com/css?family=Barlow:400,600,700&display=swap');
-  </style>
-  <script src="https://kit.fontawesome.com/988349c995.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-  <div class="sidebar">
-           <div class="home-navigation">
-             <a href="home.html">
-              <img class="logo" src="img/home-logo.png" alt="logo" style="transform:scale(1.3)"></a>
-           </div>
-
-           <div class="navigation">
-             <input type="checkbox" id="check">
-             <label for="check" class="show-menu-button">
-               <!--https://fontawesome.com/icons/bars?style=solid-->
-               <!--https://stackoverflow.com/questions/12272372/how-to-style-icon-color-size-and-shadow-of-font-awesome-icons-->
-               <i class="fas fa-bars text-success"></i>
-             </label>
-           <ul class="menu">
-            <li><a href="#interactive_elements">Interactive</a></li>
-           <li><a href="#combined_elements">Combined</a></li>
-           <li><a href="#Brand_Components">Brand</a></li>
-            <li> <label for="check" class="hide-menu-button">
-               <!--https://fontawesome.com/icons/times?style=solid-->
-               <i class="fas fa-times text-success"></i>
-             </label></li>
-          </ul>
-        </div>
-    </div>
-    <div class="body-container">
-  <section id="interactive_elements">
-
-      <div class="h2-border">
-    <h2>Interactive Elements</h2>
-  </div>
-      <h3>In-text link</h3>
-      <p> This is an <a href="#" class="in-text-link">in-text link</a>.</p>
-      <div class="css-selector">
-      <h4>CSS selector</h4>
-      <p>.in-text-link</p>
-      <h4>Sample code</h4>
-        <div class="sample-code">
-      <!-- IAT339 P1-Style_Guide_Template -->
-      <code>
-      &lt;a href="#" class="in-text-link">in-text link&lt;/a&gt;
-    </code>
-  </div>
-      </div>
-
-    <!-- Default Button styling section -->
-      <section class="nav-link">
-      <h3>Navigation Link</h3>
-      <div class="navigation">
-      <ul class="menu">
-        <li><a href="home-page.html">Work</a></li>
-     </ul>
-   </div>
-  </section>
-  <div class="css-selector">
-  <h4>CSS selector</h4>
-  <p>.navigation, .menu</p>
-  <h4>Sample code</h4>
-    <div class="sample-code">
-  <!-- IAT339 P1-Style_Guide_Template -->
-  <code>
-    &lt;div class=&quot;navigation&quot;&gt;<br>
-    &lt;ul class=&quot;menu&quot;&gt;<br>
-   &lt;li&gt;&lt;a href=&quot;home-page.com&quot;&gt;Work&lt;/a&gt;&lt;/li&gt;<br>
-  &lt;/ul&gt;<br>
-  &lt;/div&gt;
-  </code>
+        @import url('https://fonts.googleapis.com/css?family=Barlow:400,600,700&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/988349c995.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function () {
+          $("#button").mouseover(function () {
+             $("#button").css({"backgroundColor":"#FAFAFA","color":"black","border": "none"});
+          });
+          $("#button").mouseout(function () {
+              $("#button").css({"backgroundColor":"black","color":"white"});
+          });
+          $("#fixtop").mouseover(function () {
+              $("#fixtop").css("backgroundColor","white");
+              $("#button-sub").css({"backgroundColor":"#8B008B","color":"white"});
+          /*    $("#button-sub").css("color","white");*/
+          });
+          $("#fixtop").mouseout(function () {
+              $("#fixtop").css("backgroundColor","#FAFAFA");
+              $("#button-sub").css({"backgroundColor":"#FAFAFA","color":"#8B008B"});
+          });
+          $('#input1').mouseover(function () {
+              $('#input1').css("border-bottom","black 2px solid")
+          });
+          $('#input1').mouseout(function () {
+              $('#input1').css("border-bottom","black 1px solid")
+          });
+          $('#input2').mouseover(function () {
+              $('#input2').css("border-bottom","black 2px solid")
+          });
+          $('#input2').mouseout(function () {
+              $('#input2').css("border-bottom","black 1px solid")
+          });
+          $('#input3').mouseover(function () {
+              $('#input3').css("border-bottom","black 2px solid")
+          });
+          $('#input3').mouseout(function () {
+              $('#input3').css("border-bottom","black 1px solid")
+          });
+          $('#input4').mouseover(function () {
+              $('#input4').css("border-bottom","black 2px solid")
+          });
+          $('#input4').mouseout(function () {
+              $('#input4').css("border-bottom","black 1px solid")
+          });
+          $(".contact").click(function () {
+              $(".tc").fadeIn();
+          });
+          $(".close").click(function () {
+              $(".tc").fadeOut();
+          });
+          $(".workhover").mouseover(function () {
+              $(".project").fadeIn();
+          });
+          $(".workhover").mouseout(function () {
+              $(".project").fadeOut();
+          });
+          $('.view').click(function () {
+              location.href="work.html";
+          });
+          $('.button-text').click(function () {
+              location.href="contact.html";
+          })
+      })
+    </script>
+</head>
+<body>
+<div class="fixtop-background">
 </div>
-  </div>
-      <h3>Submit/Reset Buttons</h3>
-       <a class="button-sub" href="contact.html">Submit</a>
-      <div class="css-selector">
-      <h4>CSS selector</h4>
-      <p>.button-sub</p>
-      <h4>Sample code</h4>
-        <div class="sample-code">
-      <!-- IAT339 P1-Style_Guide_Template -->
-      <code>
-          &lt;a class=&quot;button-sub&quot; href=&quot;contact.html&quot;&gt;Submit&lt;/a&gt;
-      </code>
+<div class="sidebar">
+    <div class="home-navigation">
+        <a href="index.html">
+            <img class="logo" src="img/home-logo.png" alt="logo" style="transform:scale(1.3)"></a>
     </div>
-      </div>
-
-
-    <form class="my-form">
-      <h3>Text Input Field with Label</h3>
-      <div>
-      <label for="first-name-input">First Name</label>
-      <input id="first-name-input" type="text" name="first-name">
+    <div class="navigation">
+        <input type="checkbox" id="check" style="display: none">
+        <label for="check" class="show-menu-button">
+            <!--https://fontawesome.com/icons/bars?style=solid-->
+            <!--https://stackoverflow.com/questions/12272372/how-to-style-icon-color-size-and-shadow-of-font-awesome-icons-->
+            <i class="fas fa-bars text-success"></i>
+        </label>
+        <ul class="menu">
+            <li class="workhover"><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="menufooter"><a href="styleguide.html"><p>Styleguide</p></a></li>
+            <li class="menufooter"><a href="#"><p>Citations</p></a></li>
+            <li class="menufooter"><a href="https://github.com/Maria99710"><p>Git repository</p></a></li>
+            <li> <label for="check" class="hide-menu-button">
+                <!--https://fontawesome.com/icons/times?style=solid-->
+                <i class="fas fa-times text-success"></i>
+            </label></li>
+        </ul>
     </div>
-      <div>
-      <label for="last-name-input">Last Name</label>
-      <input id="last-name-input" type="text" name="last-name">
-      <div class="css-selector">
-      <h4>CSS selector</h4>
-      <p>#first-name-input[type="text"]</p>
-      <h4>Sample code</h4>
-        <div class="sample-code">
-      <!-- IAT339 P1-Style_Guide_Template -->
-      <code>
-          &lt;label for="first-name-input">First Name&lt;/label&gt;<br>
-          &lt;input id="firstname-input" type="text" name="first-name"&gt;
-      </code>
-    </div>
-      </div>
-      </div>
-      <div>
-        <label for="text-area">Message</label>
-        <textarea id="text-area" name="message"></textarea>
-        <div class="css-selector">
-        <h4>CSS selector</h4>
-        <p>.my-form textarea</p>
-        <h4>Sample code</h4>
-          <div class="sample-code">
-        <!-- IAT339 P1-Style_Guide_Template -->
-        <code>
-            &lt;label for="text-area">Message&lt;/label&gt;<br>
-            &lt;textarea id="text-area" name="message"&gt;&lt;/textarea&gt;
-        </code>
-      </div>
+</div>
+<div class="backgoundimg" >
+    <div class="text">
+        <div class="texebottom" >
+            <font class="textfolat">ZIYU</font>
+        </div>
+        <div>
+            <font class="textfolat">WANG</font>
         </div>
     </div>
-  </form>
-
-<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio -->
-      <h3>Radio Button with Label</h3>
-      <label class="radiobutton">Choice 1
-        <input type="radio" checked="checked" name="radio">
-        <span class="checkmark"></span>
-      </label>
-      <label class="radiobutton">Choice 2
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-      </label>
-      <div class="css-selector">
-      <h4>CSS selector</h4>
-      <p>.radiobutton, .checkmark</p>
-      <h4>Sample code</h4>
-        <div class="sample-code">
-      <!-- IAT339 P1-Style_Guide_Template -->
-      <code>
-          &lt;label class="radiobutton"&gt;Choice 1<br>
-          &nbsp;&lt;input type="radio" checked="checked" name="radio"&gt;<br>
-          &nbsp;&lt;span class="checkmark">&lt;/span&gt;<br>
-          &lt;/label&gt;
-      </code>
+    <div class="viewfloat">
+        <font class="view">View My Work >>></font>
     </div>
-      </div>
+</div>
+<div class="bottomfloat">
+</div>
+<div class="tc">
+    <span class="close">X</span >
 
-      <h3>Image as a Link</h3>
-      <div class="sg-image">
-      <div class="work-list1 image-box">
-      <!-- https://www.pinterest.ca/pin/83598136812326777/ -->
-       <img class="image" src="img/imageaslink.jpg" alt="white grey black clothes">
-       <div class="hover-text">
-       <a class="hover-info" href="#">
-         <h2>Image as a Link</h2>
-         <p>Fall 2020</p></a>
-    </div>
-     </div>
-   </div>
-
-      <div class="css-selector">
-      <h4>CSS selector</h4>
-      <p>.sg-image, .work-list1, .image-box, .hover-text, .hover-info</p>
-      <h4>Sample code</h4>
-        <div class="sample-code">
-      <!-- IAT339 P1-Style_Guide_Template -->
-      <code>
-        &lt;div class=&quot;sg-image&quot;&gt;<br>
-        &lt;div class=&quot;work-list1 image-box&quot;&gt;<br>
-         &lt;img class=&quot;image&quot; src=&quot;images/potential-imagery-1.jpg&quot; alt=&quot;purple sunset with a crescent moon in the sky&quot;&gt;<br>
-         &lt;div class=&quot;hover-text&quot;&gt;<br>
-         &lt;a class=&quot;hover-info&quot; href=&quot;#&quot;&gt;<br>
-           &lt;h2&gt;Image as a Link&lt;/h2&gt;<br>
-           &lt;p&gt;Fall 2019&lt;/p&gt;&lt;/a&gt;<br>
-      &lt;/div&gt;<br>
-       &lt;/div&gt;<br>
-     &lt;/div&gt;
-      </code>
-    </div>
-      </div>
-  </section>
-  <!-- // INTERACTIVE ELEMENTS SECTION -->
-
-
-  <!-- TEXT ELEMENTS SECTION // -->
-  <section id="text_elements">
-      <div class="h2-border">
-      <h2>Text Elements</h2>
-    </div>
-      <h3>Headings</h3>
-      <h1>Heading 1<span>32px</span></h1>
-      <h2>Heading 2<span>26px</span></h2>
-      <h3>Heading 3<span>21px</span></h3>
-      <h4>Heading 4<span>17px</span></h4>
-
-      <div class="css-selector">
-      <h4>Css selector</h4>
-      <p>#text_elements, .h2-border, h1, h2, h3, h4, span</p>
-      <h4>Sample code</h4>
-        <div class="sample-code">
-      <!-- IAT339 P1-Style_Guide_Template -->
-      <code>
-          &lt;section id="text_elements"&gt;<br>
-          &nbsp;&lt;div class="h2-border"&gt;<br>
-          &nbsp;&nbsp;&lt;h1&gt;Heading 1&lt;span&gt;32px&lt;/span&gt;&lt;/h1&gt;<br>
-          &nbsp;&lt;/div&gt;<br>
-          &lt;/section&gt;
-      </code>
-    </div>
-      </div>
-
-      <h3>Paragraphs</h3>
-      <!-- https://www.lipsum.com/ -->
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-         since the 1500s, when an unknown printer took a galley of type and
-         scrambled it to make a type specimen book. It has survived not only
-         five centuries, but also the leap into electronic typesetting,
-         remaining essentially unchanged. It was popularised in the 1960s
-         with the release of Letraset sheets containing Lorem Ipsum passages,
-         and more recently with desktop publishing software like Aldus
-         PageMaker including versions of Lorem Ipsum.</p>
-
-         <div class="css-selector">
-         <h4>Css selector</h4>
-         <p>p</p>
-         <h4>Sample code</h4>
-           <div class="sample-code">
-         <!-- IAT339 P1-Style_Guide_Template -->
-         <code>
-             &lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting
-               industry.&lt;/p&gt;
-         </code>
-       </div>
-         </div>
-
-         <h3>Numbered Lists</h3>
-        <div class="order-list">
-        <ol>
-          <li>List Item 1</li>
-          <li>List Item 2</li>
-          <li>List Item 3</li>
-          <li>List Item 4</li>
-        </ol>
-      </div>
-
-      <div class="css-selector">
-      <h4>Css selector</h4>
-      <p>.order-list</p>
-      <h4>Sample code</h4>
-        <div class="sample-code">
-      <!-- IAT339 P1-Style_Guide_Template -->
-      <code>
-        &lt;div class="order-list"&gt;<br>
-        &nbsp;&lt;ol&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;List Item 1&lt;/li&gt;<br>
-        &nbsp;&lt;/ol&gt;<br>
-        &lt;/div&gt;
-      </code>
-    </div>
-      </div>
-
-
-  </section>
-  <!-- // TEXT ELEMENTS SECTION -->
-
-
-
-  <!-- COMBINED ELEMENTS SECTION // -->
-  <section id="combined_elements">
-      <div class="h2-border">
-    <h2>Combined Elements</h2>
-      </div>
-
-      <h3>Main Navigation</h3>
-      <div class="navigation">
-      <ul class="menu">
-        <li><a href="home-page.html">home</a></li>
-       <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-     </ul>
-   </div>
-
-        <div class="css-selector">
-        <h4>Css selector</h4>
-        <p>.navigation, .menu</p>
-        <h4>Sample code</h4>
-          <div class="sample-code">
-        <!-- IAT339 P1-Style_Guide_Template -->
-        <code>
-          &lt;div class=&quot;navigation&quot;&gt;<br>
-          &lt;ul class=&quot;menu&quot;&gt;<br>
-          &lt;li&gt;&lt;a href=&quot;home-page.html&quot;&gt;Work&lt;/a&gt;&lt;/li&gt;<br>
-          &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;<br>
-          &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
-          &lt;/ul&gt;<br>
-          &lt;/div&gt;
-        </code>
-      </div>
-        </div>
-
-
-</section>
-
-  <!-- // COMBINED ELEMENTS SECTION -->
-
-
-
-  <section id="Brand_Components">
-
-    <div class="h2-border">
-    <h2>Brand Components</h2>
-  </div>
-    <section>
-      <h3>Fonts</h3>
-      <h4>Headings</h4>
-        <div class="font">
-        <h4>Barlow - Bold</h4>
-      </div>
-      <h4>Navigation and Paragraphs</h4>
-        <p>Barlow - Regular</p>
-
-    </section>
-
-    <section>
-      <h3>Colour palettes</h3>
-      <h4>Primary Colours</h4>
-      <div class="colour-box">
-        <img src="img/heading1.png" alt="header1 colour">
-        <img src="img/heading2.png" alt="header2 colour">
-        <img src="img/heading3.png" alt="header3 colour">
-        <img src="img/heading4.png" alt="header4 colour">
-        <h4>Paragraph and Visited Link Colours</h4>
-        <img src="img/hover.png" alt="hover colour">
-        <img src="img/paragraph.png" alt="paragraph colour">
-        <h4>Background Colours</h4>
-        <img src="img/background.png" alt="background colour">
-        </div>
-    </section>
-
-    <section class="potential-image">
-      <h3>Potential imagery, and, or, art direction</h3>
-        <img src="img/gallery1.jpg" alt="artgallery">
-        <img src="img/gallery2.jpg" alt="artgallery">
-    </section>
-
-  </section>
 </div>
 
 <div class="footer">
-  <p>&copy; 2020  Ziyu Wang</p>
-  <div class="footer-link">
-    <a href="index.html"><p>Styleguide</p></a>
-  <a href="citations.html"><p>Citations</p></a>
-  <a href="https://github.com/Maria99710/Project-3"><p>Git repository</p></a>
+    <p>&copy; 2020  Ziyu Wang</p>
+    <div class="footer-link">
+        <a href="styleguide.html"><p>Styleguide</p></a>
+        <a href="#"><p>Citations</p></a>
+        <a href="https://github.com/Maria99710/Project-3"><p>Git repository</p></a>
+    </div>
 </div>
-</div>
-  </body>
+</body>
 </html>
