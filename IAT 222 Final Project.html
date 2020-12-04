@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>project</title>
+
+    <link href="main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/988349c995.js" crossorigin="anonymous"></script>
+    <!--   https://fonts.google.com/specimen/Barlow?selection.family=Barlow:400,600,700-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Barlow:400,600,700&display=swap');
+    </style>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#button").mouseover(function () {
+                $("#button").css({"backgroundColor":"#FAFAFA","color":"black","border": "none"});
+            });
+            $("#button").mouseout(function () {
+                $("#button").css({"backgroundColor":"black","color":"white"});
+            });
+            $("#fixtop").mouseover(function () {
+                $("#fixtop").css("backgroundColor","white");
+                $("#button-sub").css({"backgroundColor":"#8B008B","color":"white"});
+                /*    $("#button-sub").css("color","white");*/
+            });
+            $("#fixtop").mouseout(function () {
+                $("#fixtop").css("backgroundColor","#FAFAFA");
+                $("#button-sub").css({"backgroundColor":"#FAFAFA","color":"#8B008B"});
+            });
+            $('#input1').mouseover(function () {
+                $('#input1').css("border-bottom","black 2px solid")
+            });
+            $('#input1').mouseout(function () {
+                $('#input1').css("border-bottom","black 1px solid")
+            });
+            $('#input2').mouseover(function () {
+                $('#input2').css("border-bottom","black 2px solid")
+            });
+            $('#input2').mouseout(function () {
+                $('#input2').css("border-bottom","black 1px solid")
+            });
+            $('#input3').mouseover(function () {
+                $('#input3').css("border-bottom","black 2px solid")
+            });
+            $('#input3').mouseout(function () {
+                $('#input3').css("border-bottom","black 1px solid")
+            });
+            $('#input4').mouseover(function () {
+                $('#input4').css("border-bottom","black 2px solid")
+            });
+            $('#input4').mouseout(function () {
+                $('#input4').css("border-bottom","black 1px solid")
+            });
+            $(".contact").click(function () {
+                $(".tc").fadeIn();
+            });
+            $(".close").click(function () {
+                $(".tc").fadeOut();
+            });
+            $(".workhover").mouseover(function () {
+                $(".project").fadeIn();
+            });
+            $(".workhover").mouseout(function () {
+                $(".project").fadeOut();
+            })
+            $('.button-text').click(function () {
+                location.href="contact.html";
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="fixtop-background">
+</div>
+<div class="sidebar">
+    <div class="home-navigation">
+        <a href="home.html">
+            <img class="logo" src="img/home-logo.png" alt="logo" style="transform:scale(1.3)"></a>
+    </div>
+    <div class="navigation">
+        <input type="checkbox" id="check" style="display: none">
+        <label for="check" class="show-menu-button">
+            <!--https://fontawesome.com/icons/bars?style=solid-->
+            <!--https://stackoverflow.com/questions/12272372/how-to-style-icon-color-size-and-shadow-of-font-awesome-icons-->
+            <i class="fas fa-bars text-success"></i>
+        </label>
+        <ul class="menu">
+            <li class="workhover"><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="menufooter"><a href="index.html"><p>Styleguide</p></a></li>
+            <li class="menufooter"><a href="#"><p>Citations</p></a></li>
+            <li class="menufooter"><a href="https://github.com/Maria99710"><p>Git repository</p></a></li>
+            <li> <label for="check" class="hide-menu-button">
+                <!--https://fontawesome.com/icons/times?style=solid-->
+                <i class="fas fa-times text-success"></i>
+            </label></li>
+        </ul>
+    </div>
+</div>
+<div class="project2">
+    <div class="backgroundProjectimg1">
+        <img src="img/work2.png" class="imgxy3">
+    </div>
+    <div class="backgroundProjectext">
+        <div class="textleft">
+            <h2>Graphic Design</h2>
+            <span>Fall 2018</span>
+        </div>
+        <div class="textright">
+            <span>This project is designed to give a chance to practice the layout, communication and typographic skills. We need to use the composition technique include: Grid or non-grid based composition, visual hierarchy, balance, use of whitespace, article flow and focus. The magazine focues on consistency in print layouts, aesthetic unity and readability,
+                flow and type-setting considerations.</span>
+        </div>
+    </div>
+    <div class="backgroundProjectext">
+        <div class="textleft">
+            <h2>Brainstorming and Inspiration</h2>
+        </div>
+        <div class="textright">
+            <span>For the first step of the brainstorming, I need to choose 2-4 fonts for my article, come up with the article content which include a title for your article,
+                a sub-title for your article and at least 3 main sub-headings that might appear in the article. Then sketch 20 possible print layouts, these sketches should be no wider than 5cm (2") across. I did lots of research about the magazine layout to find the inspiration, then depends on what I have read before, briefly sketch some sketches.
+</span>
+        </div>
+    </div>
+    <div class="backgroundProjectimg1">
+        <img src="img/%20work2sketch1.jpg" class="imgxy4">
+        <img src="img/work2sketch2.jpg" class="imgxy5">
+    </div>
+    <div class="backgroundProjectext">
+        <div class="textleft">
+            <h2>First Draft</h2>
+        </div>
+        <div class="textright">
+            <span>According to the sketch that I draw, I chose some of them that both figure and text accommodate in one page and there is enough space in the text area that I can alter the text position to figure out a good composition for each page. As the image shows below,
+                the first draft looks so unprofessional and boring which is not a magazine layout.</span>
+        </div>
+    </div>
+    <div class="backgroundProjectimg1">
+        <img src="img/draft1.jpg" class="imgxy4">
+        <img src="img/font.jpg" class="imgxy5">
+    </div>
+    <div class="backgroundProjectext">
+        <div class="textleft">
+            <h2>First Draft</h2>
+        </div>
+        <div class="textright">
+            <span>After talking with my instructor, I got a few suggestions about the problem existed in my first draft and they help me solved the problem that I encountered, I tried to follow a professional magazine layout to create my own one. I found that white space is a crucial element in graphic design that can provide advanced visual quality for your graphic design. The context does not need to fill in all the space. Moreover, I learnt some magazine design techniques like the position of the page number,
+                the picture chooses and the whole style should be consistent.</span>
+        </div>
+    </div>
+    <div class="backgroundProjectimg1">
+        <img src="img/final%20-1.jpg" class="imgxy3">
+    </div>
+    <div></div>
+    <div class="backgroundProjectimg1">
+        <img src="img/final%20-2.jpg" class="imgxy3">
+    </div>
+    <div></div>
+    <div class="backgroundProjectimg1">
+        <img src="img/final%20-3.jpg" class="imgxy3">
+    </div>
+    <div></div>
+    <div class="backgroundProjectimg1">
+        <img src="img/final%20-4.jpg" class="imgxy3">
+    </div>
+    <div></div>
+    <div class="backgroundProjectimg1">
+        <img src="img/final%20-5.jpg" class="imgxy3">
+    </div>
+</div>
+<div class="bottomfloat">
+
+</div>
+<div class="tc">
+    <span class="close">X</span >
+
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2020  Ziyu Wang</p>
+    <div class="footer-link">
+        <a href="index.html"><p>Styleguide</p></a>
+        <a href="#"><p>Citations</p></a>
+        <a href="https://github.com/Maria99710"><p>Git repository</p></a>
+    </div>
+</div>
+</body>
+</html>
