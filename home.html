@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HOME</title>
+
+    <link href="main.css" rel="stylesheet">
+  <!--   https://fonts.google.com/specimen/Barlow?selection.family=Barlow:400,600,700-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Barlow:400,600,700&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/988349c995.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function () {
+          $("#button").mouseover(function () {
+             $("#button").css({"backgroundColor":"#FAFAFA","color":"black","border": "none"});
+          });
+          $("#button").mouseout(function () {
+              $("#button").css({"backgroundColor":"black","color":"white"});
+          });
+          $("#fixtop").mouseover(function () {
+              $("#fixtop").css("backgroundColor","white");
+              $("#button-sub").css({"backgroundColor":"#8B008B","color":"white"});
+          /*    $("#button-sub").css("color","white");*/
+          });
+          $("#fixtop").mouseout(function () {
+              $("#fixtop").css("backgroundColor","#FAFAFA");
+              $("#button-sub").css({"backgroundColor":"#FAFAFA","color":"#8B008B"});
+          });
+          $('#input1').mouseover(function () {
+              $('#input1').css("border-bottom","black 2px solid")
+          });
+          $('#input1').mouseout(function () {
+              $('#input1').css("border-bottom","black 1px solid")
+          });
+          $('#input2').mouseover(function () {
+              $('#input2').css("border-bottom","black 2px solid")
+          });
+          $('#input2').mouseout(function () {
+              $('#input2').css("border-bottom","black 1px solid")
+          });
+          $('#input3').mouseover(function () {
+              $('#input3').css("border-bottom","black 2px solid")
+          });
+          $('#input3').mouseout(function () {
+              $('#input3').css("border-bottom","black 1px solid")
+          });
+          $('#input4').mouseover(function () {
+              $('#input4').css("border-bottom","black 2px solid")
+          });
+          $('#input4').mouseout(function () {
+              $('#input4').css("border-bottom","black 1px solid")
+          });
+          $(".contact").click(function () {
+              $(".tc").fadeIn();
+          });
+          $(".close").click(function () {
+              $(".tc").fadeOut();
+          });
+          $(".workhover").mouseover(function () {
+              $(".project").fadeIn();
+          });
+          $(".workhover").mouseout(function () {
+              $(".project").fadeOut();
+          });
+          $('.view').click(function () {
+              location.href="work.html";
+          });
+          $('.button-text').click(function () {
+              location.href="contact.html";
+          })
+      })
+    </script>
+</head>
+<body>
+<div class="fixtop-background">
+</div>
+<div class="sidebar">
+    <div class="home-navigation">
+        <a href="home.html">
+            <img class="logo" src="img/home-logo.png" alt="logo" style="transform:scale(1.3)"></a>
+    </div>
+    <div class="navigation">
+        <input type="checkbox" id="check" style="display: none">
+        <label for="check" class="show-menu-button">
+            <!--https://fontawesome.com/icons/bars?style=solid-->
+            <!--https://stackoverflow.com/questions/12272372/how-to-style-icon-color-size-and-shadow-of-font-awesome-icons-->
+            <i class="fas fa-bars text-success"></i>
+        </label>
+        <ul class="menu">
+            <li class="workhover"><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="menufooter"><a href="index.html"><p>Styleguide</p></a></li>
+            <li class="menufooter"><a href="#"><p>Citations</p></a></li>
+            <li class="menufooter"><a href="https://github.com/Maria99710"><p>Git repository</p></a></li>
+            <li> <label for="check" class="hide-menu-button">
+                <!--https://fontawesome.com/icons/times?style=solid-->
+                <i class="fas fa-times text-success"></i>
+            </label></li>
+        </ul>
+    </div>
+</div>
+<div class="backgoundimg" >
+    <div class="text">
+        <div class="texebottom" >
+            <font class="textfolat">ZIYU</font>
+        </div>
+        <div>
+            <font class="textfolat">WANG</font>
+        </div>
+    </div>
+    <div class="viewfloat">
+        <font class="view">View My Work >>></font>
+    </div>
+</div>
+<div class="bottomfloat">
+</div>
+<div class="tc">
+    <span class="close">X</span >
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2020  Ziyu Wang</p>
+    <div class="footer-link">
+        <a href="index.html"><p>Styleguide</p></a>
+        <a href="#"><p>Citations</p></a>
+        <a href="https://github.com/Maria99710"><p>Git repository</p></a>
+    </div>
+</div>
+</body>
+</html>
